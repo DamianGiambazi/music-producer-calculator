@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Producer's Timing Calculator</title>
+    
+    <!-- Basic styling for a clean, professional look -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .calculator-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        .input-group label {
+            font-size: 24px;  /* Makes the label larger */
+            color: #570f2f;   /* Sets a pleasant blue color */
+            display: block;    /* Ensures the label sits above the input */
+            margin-bottom: 8px; /* Adds some space between label and input */
+        }
+        
+        .results-section {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #3c94ec;
+            border-radius: 4px;
+        }
+        
+        /* Styling for our calculation button */
+        .calc-button {
+            background-color: #e2634a;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        
+        .calc-button:hover {
+            background-color: #f41efb;
+        }
+        
+        /* Styling for our result display */
+        .timing-result {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 10px;
+        }
+        /* Frequency visualization styles will go here */
+        /* Waveform display styles will go here */
+    </style>
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Music Producer's Timing Calculator</h1>
+        
+        <!-- Input Section -->
+        <div class="input-group">
+            <label for="bpm">Tempo (BPM):</label>
+            <input type="number" id="bpm" min="20" max="300" value="120">
+            <button id="calculateBtn" class="calc-button">Calculate</button>
+        </div>
+
+        <div class="input-group">
+            <label for="rootNote">Root Note:</label>
+            <select id="rootNote" class="note-select">
+                <option value="C">C</option>
+                <option value="C#">C♯/D♭</option>
+                <option value="D">D</option>
+                <option value="D#">D♯/E♭</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+                <option value="F#">F♯/G♭</option>
+                <option value="G">G</option>
+                <option value="G#">G♯/A♭</option>
+                <option value="A" selected>A</option>
+                <option value="A#">A♯/B♭</option>
+                <option value="B">B</option>
+            </select>
+        </div>
+        
+        <!-- Results Display -->
+        <div class="results-section">
+            <h2>Timing Information</h2>
+            <div id="timingResults">
+                <!-- JavaScript will populate this -->
+            </div>
+
+        <div class="frequency-section">
+            <h2>Frequency Information</h2>
+            <div id="frequencyResults">
+                <!-- JavaScript will populate this -->
+            </div>
+        </div>
+        
+        <!-- Future expansion areas -->
+        <div id="frequencySection" style="display: none;">
+            <!-- Frequency calculations will go here -->
+        </div>
+        
+        <div id="visualizationSection" style="display: none;">
+            <!-- Musical visualizations will go here -->
+        </div>
+    </div>
+
+    <!-- JavaScript connection - we'll add the actual code in our next lesson -->
+    <script src="timing-calculator.js"></script>
+    <script src="frequency-calculator.js"></script>
+</body>
+</html>
